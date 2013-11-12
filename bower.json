@@ -1,0 +1,14 @@
+{
+  "name": "byteweaver",
+  "version": "0.0.0",
+  "authors": [
+    "noxan@byteweaver.org"
+  ],
+  "description": "byteweaver website",
+  "license": "MIT",
+  "homepage": "byteweaver.org",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.0"
+  }
+}
