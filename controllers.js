@@ -7,7 +7,7 @@ function ProjectCtrl($scope) {
     {'name': 'django-tickets'},
     {'name': 'django-skrill'},
     {'name': 'django-polls'},
+    {'name': 'django-eca-catalogue'},
     {'name': 'django-singleactiveobject'},
-    {'name': 'django-eca-catalogue'}
   ];
 };
