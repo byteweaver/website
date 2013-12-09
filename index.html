@@ -3,11 +3,21 @@ layout: default
 title: byteweaver
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+{% raw %}
+<script src="/controllers.js"></script>
+
+<div ng-controller="ProjectCtrl">
+  <div class="col-md-3 project" ng-repeat="project in projects">
+    <h3>{{project.name}}</h3>
+    <p>
+      <a href="https://github.com/byteweaver/{{project.name}}/" class="btn btn-default">GitHub</a>
+      <a href="https://pypi.python.org/pypi/{{project.name}}/" class="btn btn-default">PyPI</a>
+    </p>
+    <p>
+      <a href="https://www.djangopackages.com/packages/p/{{project.name}}/" class="btn btn-default">Django Packages</a>
+    </p>
+    <p><img src="https://pypip.in/v/{{project.name}}/badge.png"></p>
+    <p><img src="https://pypip.in/d/{{project.name}}/badge.png"></p>
+  </div>
 </div>
+{% endraw %}
