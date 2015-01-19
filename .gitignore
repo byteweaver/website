@@ -2,3 +2,4 @@
 *.swo
 /assets/
 /_site/
+node_modules/
