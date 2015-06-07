@@ -8,7 +8,7 @@ angular.module('ng').filter('cut', function () {
     if (!max) return value;
     if (value.length <= max) return value;
 
-    value = value.substr(0, max);
+    value = value.substr(0, max).trim();
     if (wordwise) {
       var lastspace = value.lastIndexOf(' ');
       if (lastspace != -1) {
