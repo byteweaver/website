@@ -1,5 +1,5 @@
 function ProjectCtrl($scope, $http) {
-  var blacklist = ['django-tos'];
+  var blacklist = ['django-tos', 'django-multiselectfield']; // forks
 
   $http.get('https://api.github.com/orgs/byteweaver/repos').success(function (repos) {
     $scope.projects = repos.filter(function (repo) {
