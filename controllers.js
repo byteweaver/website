@@ -1,13 +1,7 @@
-function ProjectCtrl($scope) {
-  $scope.projects = [
-    {'name': 'django-posts'},
-    {'name': 'django-forums'},
-    {'name': 'django-referral'},
-    {'name': 'django-coupons'},
-    {'name': 'django-tickets'},
-    {'name': 'django-skrill'},
-    {'name': 'django-polls'},
-    {'name': 'django-eca-catalogue'},
-    {'name': 'django-singleactiveobject'},
-  ];
+function ProjectCtrl($scope, $http) {
+  $http.get('https://api.github.com/orgs/byteweaver/repos').success(function (repos) {
+    $scope.projects = repos.filter(function (repo) {
+      return repo.name.startsWith('django-');
+    });
+  });
 };
